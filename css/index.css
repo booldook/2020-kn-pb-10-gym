@@ -74,7 +74,12 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .header > .fix-wrap > div {width: 350px; height: 100%; position: absolute; right: 0; background-color: #000; color: #fff;}
 .header .navi-wrap-mo {margin-top: 100px; cursor: pointer;}
 .header .navi-wrap-mo > li:not(.subs-mo) {padding: 1rem 3rem; border-bottom: 1px solid #444;}
+.header .navi-child-mo > i {float: right;}
+.header .subs-mo {display: none;}
 .header .subs-mo li {padding: 1rem 3rem; border-bottom: 1px solid #444;}
+.header .subs-mo li::before {display: inline-block; content: "-"; margin-right: 1rem;}
+.header .navi-wrap-mo > li:not(.subs-mo):hover {background-color: #555;} 
+.header .subs-mo li:hover {background-color: #555;} 
 
 /*********** 반응형 ************/
 @media screen and (max-width: 991px) {
