@@ -27,9 +27,15 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 .header > .navi-bars {width: 84px; height: 88px; position: absolute; right: 10rem; border-right: 1px solid #ddd; cursor: pointer;}
 .header .bar {width: 36px; height: 3px; background-color: #999; position: absolute; transform-origin: center; animation-fill-mode: forwards; animation-duration: 1s;}
-.header .bar1 {top: 33px; left: 24px; animation-name: bar1;}
-.header .bar2 {top: 43px; left: 24px; animation-name: bar2;}
-.header .bar3 {top: 53px; left: 24px; animation-name: bar3;}
+.header .bar1 {top: 33px; left: 24px;}
+.header .bar2 {top: 43px; left: 24px;}
+.header .bar3 {top: 53px; left: 24px;}
+.header .navi-bars.default > .bar1 {animation-name: bar1-rev;}
+.header .navi-bars.default > .bar2 {animation-name: bar2-rev;}
+.header .navi-bars.default > .bar3 {animation-name: bar3-rev;}
+.header .navi-bars.active > .bar1 {animation-name: bar1;}
+.header .navi-bars.active > .bar2 {animation-name: bar2;}
+.header .navi-bars.active > .bar3 {animation-name: bar3;}
 
 @keyframes bar1 {
 	0% {}
@@ -43,14 +49,24 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 }
 @keyframes bar3 {
 	0% {}
-	40% {top: 43px; transform: rotate(0deg)}
-	100% {top: 43px; transform: rotate(-135deg)}
+	40% {top: 43px; transform: rotate(0deg);}
+	100% {top: 43px; transform: rotate(-135deg);}
 }
 
 @keyframes bar1-rev {
-	0% {}
-	60% {}
-	100% {}
+	0% {top: 43px; transform: rotate(-225deg);}
+	60% {top: 43px; transform: rotate(0deg);}
+	100% {top: 33px; transform: rotate(0deg);}
+}
+@keyframes bar2-rev {
+	0% {opacity: 0;}
+	60% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes bar3-rev {
+	0% {top: 43px; transform: rotate(-135deg);}
+	60% {top: 43px; transform: rotate(0deg);}
+	100% {top: 53px; transform: rotate(0deg);}
 }
 
 
