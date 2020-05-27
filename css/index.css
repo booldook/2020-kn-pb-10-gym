@@ -1,0 +1,6 @@
+.header {padding: 0 2rem;}
+.header > .logo {float: left; width: 250px;}
+.header > .sns-wrap {float: right;}
+.header > .navi-wrap {float: right;}
+.header li {float: left;}
+.header > .navi-wrap > li {padding: 2rem 1.5rem;}
