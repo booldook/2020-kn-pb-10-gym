@@ -38,9 +38,9 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .header .navi-bars.active > .bar3 {animation-name: bar3;}
 
 @keyframes bar1 {
-	0% {}
+	0% {background-color: #999;}
 	40% {top: 43px; transform: rotate(0deg)}
-	100% {top: 43px; transform: rotate(-225deg)}
+	100% {top: 43px; transform: rotate(-225deg); background-color: #fff;}
 }
 @keyframes bar2 {
 	0% {}
@@ -48,15 +48,15 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 	100% {opacity: 0;}
 }
 @keyframes bar3 {
-	0% {}
+	0% {background-color: #999;}
 	40% {top: 43px; transform: rotate(0deg);}
-	100% {top: 43px; transform: rotate(-135deg);}
+	100% {top: 43px; transform: rotate(-135deg); background-color: #fff;}
 }
 
 @keyframes bar1-rev {
-	0% {top: 43px; transform: rotate(-225deg);}
+	0% {top: 43px; transform: rotate(-225deg); background-color: #fff;}
 	60% {top: 43px; transform: rotate(0deg);}
-	100% {top: 33px; transform: rotate(0deg);}
+	100% {top: 33px; transform: rotate(0deg); background-color: #999;}
 }
 @keyframes bar2-rev {
 	0% {opacity: 0;}
@@ -64,13 +64,14 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 	100% {opacity: 1;}
 }
 @keyframes bar3-rev {
-	0% {top: 43px; transform: rotate(-135deg);}
+	0% {top: 43px; transform: rotate(-135deg); background-color: #fff;}
 	60% {top: 43px; transform: rotate(0deg);}
-	100% {top: 53px; transform: rotate(0deg);}
+	100% {top: 53px; transform: rotate(0deg); background-color: #999;}
 }
 
 .header > .fix-wrap {width: 100%; height: 100vh; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,0.5);}
 
+.header > .fix-wrap > div {width: 350px; height: 100%; position: absolute; right: 0; background-color: #000; color: #fff;}
 
 /*********** 반응형 ************/
 @media screen and (max-width: 991px) {
