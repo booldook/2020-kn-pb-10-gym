@@ -8,19 +8,25 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 
 /*********** .header ************/
-.header {padding: 0 2rem; color: #777; border-bottom: 1px solid #ddd;}
-.header > .logo {float: left; width: 250px;}
-.header > .sns-wrap {float: right; padding: 1.5rem 0 1rem 0;}
-.header > .navi-wrap {float: right;}
+.header {width: 100%; position: fixed; z-index: 999; padding: 0 2rem; color: #777; border-bottom: 1px solid #ddd; background-color: #fff;}
+.header > .logo {float: left; width: 200px;}
+.header > .sns-wrap {float: right; padding: 1.125rem 0 0.5rem 0; margin-left: 1rem;}
+.header > .navi-wrap {float: right; font-size: 0.875rem;}
 .header > ul > li {float: left; cursor: pointer;}
-.header > .navi-wrap > li {width: 120px; text-align: center; padding: 2rem 0; border-left: 1px solid #ddd; transition: all 0.5s; position: relative;}
+.header > .navi-wrap > li {width: 100px; text-align: center; padding: 1.625rem 0; border-left: 1px solid #ddd; transition: all 0.5s; position: relative;}
 .header > .navi-wrap > li.active {color: #444;}
 .header > .navi-wrap > li:hover {background-color: #f30; color: #fff;}
-.header .subs {position: absolute; width: 260px; top: 5.25rem; background-color: #f20; color: #fff; display: none;}
-.header .subs > li {padding: 1rem; text-align: left; cursor: pointer;}
+.header .subs {position: absolute; width: 220px; top: 4.3125rem; background-color: #f20; color: #fff; display: none;}
+.header .subs > li {padding: 0.75rem; text-align: left; cursor: pointer;}
 .header .subs > li:hover {background-color: #af1902;}
 
-.header > .sns-wrap > li {width: 2.5rem; height: 2.5rem; line-height: 2.5rem; border-radius: 50%; text-align: center; transition: all 0.5s;}
+.header > .sns-wrap > li {width: 2rem; height: 2rem; line-height: 2rem; border-radius: 50%; text-align: center; transition: all 0.5s;}
 .header > .sns-wrap > .facebook-icon:hover {background-color: #1f59b6; color: #fff;}
 .header > .sns-wrap > .insta-icon:hover {background-color: #b6751f; color: #fff;}
 .header > .sns-wrap > .mail-icon:hover {background-color: #1b9b41; color: #fff;}
+
+
+/*********** 반응형 ************/
+@media screen and (max-width: 991px) {
+	.header > .navi-wrap {display: none;}
+}
