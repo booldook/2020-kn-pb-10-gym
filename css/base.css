@@ -1,0 +1,11 @@
+/*********** Normalize ***********/
+html, body, h1, h2, h3, h4, h5, h6, p, div, form, input, textarea, select, header, section, nav, article, aside, footer, table, thead, tbody, tr, td, th, ul, ol, li, dl, dt, dd {margin: 0; padding: 0; box-sizing: border-box;}
+img {vertical-align: bottom;}
+table {border-collapse: collapse;}
+ul, ol {list-style: none;}
+
+/*********** 공통사항 ***********/
+.clear::after {content: ""; display: block; clear: both;}
+.img {width: 100%;}
+.imgx {max-width: 100%;}
+.pointer {cursor: pointer;}
