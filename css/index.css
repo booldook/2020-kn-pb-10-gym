@@ -10,7 +10,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 /*********** .header ************/
 .header {width: 100%; position: fixed; z-index: 999; padding: 0 2rem; color: #777; border-bottom: 1px solid #ddd; background-color: #fff;}
 .header > .logo {float: left; width: 200px;}
-.header > .sns-wrap {float: right; padding: 1.125rem 0 0.5rem 0; margin-left: 0.75rem;}
+.header > .sns-wrap {float: right; padding: 1.125rem 0 0.5rem 1rem;}
 .header > .navi-wrap {float: right; font-size: 0.875rem;}
 .header > ul > li {float: left; cursor: pointer;}
 .header > .navi-wrap > li {width: 100px; text-align: center; padding: 1.625rem 0; border-left: 1px solid #ddd; transition: all 0.5s; position: relative;}
@@ -25,7 +25,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .header > .sns-wrap > .insta-icon:hover {background-color: #b6751f; color: #fff;}
 .header > .sns-wrap > .mail-icon:hover {background-color: #1b9b41; color: #fff;}
 
-.header > .navi-bars {width: 84px; height: 88px; position: absolute; right: 10rem; border-right: 1px solid #ddd; cursor: pointer;}
+.header > .navi-bars {width: 84px; height: 88px; position: absolute; right: 10rem; cursor: pointer;}
 .header .bar {width: 36px; height: 3px; background-color: #999; position: absolute; transform-origin: center; animation-fill-mode: forwards; animation-duration: 1s;}
 .header .bar1 {top: 33px; left: 24px;}
 .header .bar2 {top: 43px; left: 24px;}
@@ -69,10 +69,12 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 	100% {top: 53px; transform: rotate(0deg);}
 }
 
+.header > .fix-wrap {width: 100%; height: 100vh; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,0.5);}
+
 
 /*********** 반응형 ************/
 @media screen and (max-width: 991px) {
 	.header > .navi-wrap {display: none;}
-	.header > .sns-wrap {padding: 1.75rem 0 0.5rem 0;}
+	.header > .sns-wrap {padding: 1.75rem 0 0.5rem 1rem; height: 88px; border-left: 1px solid #ddd;}
 	.header > .logo {width: 260px;}
 }
