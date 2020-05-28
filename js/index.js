@@ -44,6 +44,16 @@ function mainInit() {
 function htmlMaker(n) {
 	html  = '<div class="slide">';
 	html += '<img src="'+datas[n].src+'" class="img">';
+	html += '<div class="slide-content '+datas[n].class+'">';
+	html += '<h2 class="title">'+datas[n].title+'<span>.</span></h2>';
+	html += '<h3 class="desc">'+datas[n].desc+'</h3>';
+	html += '<div class="bts">';
+	for(var i=0, bt; i<datas[n].buttons.length; i++) {
+		bt = datas[n].buttons[i];
+		html += '<a href="'+bt.link+'" class="'+bt.class+'">'+bt.title+'</a>';
+	}
+	html += '</div>';
+	html += '</div>';
 	html += '</div>';
 	return html;
 }
@@ -137,8 +147,7 @@ function onPagerClick() {
 	else {
 		return false;
 	}
-	$(".main-wrap > .slide").eq(1).remove();
-	$(".main-wrap > .slide").eq(1).remove();
+	$(".main-wrap > .slide").not($(".main-wrap > .slide").eq(0)).remove();
 	$(htmlMaker(mainNow)).appendTo(".main-wrap").css("top", target[0]);
 	$(".main-wrap > .slide").eq(0).css("transform", "translateY("+target[1]+")");
 	$(".main-wrap > .slide").eq(1).stop().animate({"top": 0}, 500, mainInit);
