@@ -32,7 +32,7 @@ function mainInit() {
 	mainNext = (mainNow == mainLast) ? 0 : mainNow + 1;
 	$(".main-wrap").find(".slide").remove();
 	$(htmlMaker(mainNow)).appendTo(".main-wrap").css({
-		"position": "static",
+		"position": "relative",
 		"transition": "transform 0.5s"
 	});
 	$(htmlMaker(mainPrev)).appendTo(".main-wrap").css("top", "-100%");
@@ -44,6 +44,7 @@ function mainInit() {
 function htmlMaker(n) {
 	html  = '<div class="slide">';
 	html += '<img src="'+datas[n].src+'" class="img">';
+	html += '<div class="mask"></div>';
 	html += '<div class="slide-content '+datas[n].class+'">';
 	html += '<h2 class="title">'+datas[n].title+'<span>.</span></h2>';
 	html += '<h3 class="desc">'+datas[n].desc+'</h3>';

@@ -88,6 +88,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 /*********** main-wrap ************/
 .main-wrap {position: relative; transition: top 0.5s; overflow: hidden;}
 .main-wrap > .slide {position: absolute; width: 100%;}
+.main-wrap > .slide > .mask {width: 100%; height: 100%; position: absolute; background-color: #000; opacity: 0.3; top: 0;}
 .main-wrap > .bt {color: #fff; font-size: 2rem; line-height: 56px; width: 60px; height: 60px; text-align: center; border: 2px solid #fff; position: absolute; top: calc(50% - 30px); cursor: pointer; z-index: 900;}
 .main-wrap > .bt.bt-prev {left: 1rem;}
 .main-wrap > .bt.bt-next {right: 1rem;}
@@ -96,6 +97,17 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .main-wrap .pager {font-size: 1rem; color: #fff; cursor: pointer;}
 .main-wrap .pager::before {content: "○";}
 .main-wrap .pager.active::before {content: "●";}
+
+.main-wrap .slide-content {position: absolute; top: 20%; color: #fff;}
+.main-wrap .slide-content.type-c {width: 80%; left: 10%; text-align: center;}
+.main-wrap .slide-content.type-l {left: 10%;}
+.main-wrap .slide-content > .title {font-size: 4.5rem; font-family: 'Oswald', sans-serif;}
+.main-wrap .slide-content > .desc {font-size: 2rem;}
+.main-wrap .slide-content > .bts {}
+.main-wrap .slide-content > .bts > a {}
+.main-wrap .slide-content > .bts > a.bt-ghost {}
+.main-wrap .slide-content > .bts > a.bt-orange {}
+.main-wrap .slide-content > .bts > a.bt-gray {}
 
 /*********** 반응형 ************/
 @media screen and (max-width: 991px) {
