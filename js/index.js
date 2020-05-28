@@ -22,8 +22,8 @@ function mainAjax() {
 	$.get("../json/banner.json", function(res){
 		datas = res.banners;
 		mainLast = datas.length - 1;
-		mainInit();
 		mainPager();
+		mainInit();
 	});
 }
 
@@ -37,6 +37,8 @@ function mainInit() {
 	});
 	$(htmlMaker(mainPrev)).appendTo(".main-wrap").css("top", "-100%");
 	$(htmlMaker(mainNext)).appendTo(".main-wrap").css("top", "100%");
+	$(".main-wrap .pager").removeClass("active");
+	$(".main-wrap .pager").eq(mainNow).addClass("active");
 }
 
 function htmlMaker(n) {
@@ -47,7 +49,9 @@ function htmlMaker(n) {
 }
 
 function mainPager() {
-	
+	for(var i=0; i<=mainLast; i++) {
+		$('<span class="pager"></span>').appendTo(".main-wrap .pagers").click(onPagerClick);
+	}
 }
 
 function fixShow(show) {
@@ -115,6 +119,21 @@ function onMainNext() {
 		mainInit();
 	});
 }
+
+function onPagerClick() {
+	var old = mainNow;
+	mainNow  = $(this).index();
+	if(mainNow > old) {
+		console.log("아래거 올라옴");
+		$(".main-wrap > .slide").eq(2).remove();
+		$(htmlMaker(mainNow))
+	}
+	else if(mainNow < old) {
+		console.log("위에거 내려옴");
+	}
+}
+
+
 
 /************ 이벤트선언 *************/
 $(window).resize(onResize).trigger("resize");
