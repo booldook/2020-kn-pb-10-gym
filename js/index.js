@@ -121,16 +121,27 @@ function onMainNext() {
 }
 
 function onPagerClick() {
+	var target = [];
 	var old = mainNow;
 	mainNow  = $(this).index();
 	if(mainNow > old) {
-		console.log("아래거 올라옴");
-		$(".main-wrap > .slide").eq(2).remove();
-		$(htmlMaker(mainNow))
+		// console.log("아래거 올라옴");
+		target[0] = "100%";
+		target[1] = "-100px";
 	}
 	else if(mainNow < old) {
-		console.log("위에거 내려옴");
+		// console.log("위에거 내려옴");
+		target[0] = "-100%";
+		target[1] = "100px";
 	}
+	else {
+		return false;
+	}
+	$(".main-wrap > .slide").eq(1).remove();
+	$(".main-wrap > .slide").eq(1).remove();
+	$(htmlMaker(mainNow)).appendTo(".main-wrap").css("top", target[0]);
+	$(".main-wrap > .slide").eq(0).css("transform", "translateY("+target[1]+")");
+	$(".main-wrap > .slide").eq(1).stop().animate({"top": 0}, 500, mainInit);
 }
 
 
