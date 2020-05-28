@@ -92,6 +92,10 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .main-wrap > .bt.bt-prev {left: 1rem;}
 .main-wrap > .bt.bt-next {right: 1rem;}
 
+.main-wrap > .pagers {position: absolute; z-index: 900; bottom: 1rem; left: 50%; transform: translateX(-50%);}
+.main-wrap .pager {font-size: 1rem; color: #fff; cursor: pointer;}
+.main-wrap .pager::before {content: "○";}
+.main-wrap .pager.active::before {content: "●";}
 
 /*********** 반응형 ************/
 @media screen and (max-width: 991px) {

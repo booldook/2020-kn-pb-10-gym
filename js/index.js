@@ -23,6 +23,7 @@ function mainAjax() {
 		datas = res.banners;
 		mainLast = datas.length - 1;
 		mainInit();
+		mainPager();
 	});
 }
 
@@ -43,6 +44,10 @@ function htmlMaker(n) {
 	html += '<img src="'+datas[n].src+'" class="img">';
 	html += '</div>';
 	return html;
+}
+
+function mainPager() {
+	
 }
 
 function fixShow(show) {
