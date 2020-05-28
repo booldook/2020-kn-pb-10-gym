@@ -25,7 +25,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .header > .sns-wrap > .insta-icon:hover {background-color: #b6751f; color: #fff;}
 .header > .sns-wrap > .mail-icon:hover {background-color: #1b9b41; color: #fff;}
 
-.header > .navi-bars {width: 84px; height: 88px; position: absolute; right: 10rem; cursor: pointer;}
+.header > .navi-bars {width: 84px; height: 88px; position: absolute; right: 8rem; cursor: pointer; display: none;}
 .header .bar {width: 36px; height: 3px; background-color: #999; position: absolute; transform-origin: center; animation-fill-mode: forwards; animation-duration: 1s;}
 .header .bar1 {top: 33px; left: 24px;}
 .header .bar2 {top: 43px; left: 24px;}
@@ -88,6 +88,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 /*********** 반응형 ************/
 @media screen and (max-width: 991px) {
 	.header > .navi-wrap {display: none;}
-	.header > .sns-wrap {padding: 1.75rem 0 0.5rem 1rem; height: 88px; border-left: 1px solid #ddd;}
+	.header > .sns-wrap {padding: 1.75rem 0 0.5rem 0.25rem; height: 88px; border-left: 1px solid #ddd;}
 	.header > .logo {width: 260px;}
+	.header > .navi-bars {display: block;}
 }

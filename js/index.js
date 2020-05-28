@@ -1,3 +1,17 @@
+//<div class="slide">
+//<img src="../img/hero-1.jpg" class="img">
+//</div>
+/************ 사전지식 *************/
+
+
+/************ 전역변수 *************/
+var data;
+
+var mainNow = 0;
+var mainLast; 
+
+
+
 /************ 사용자함수 *************/
 function fixShow(show) {
 	if(show) {

@@ -1,0 +1,41 @@
+{
+	"banners": [
+		{
+			"src": "../img/hero-1.jpg", 
+			"title": "THE BEST GYM YOU WILL EVER FIND", 
+			"desc": "FREE 30 DAY TRIAL",
+			"position": "C", 
+			"buttons": [
+				{"title": "GIVE IT A TRY NOW", "link": "#", "class": ".bt-ghost"}
+			]
+		},
+		{
+			"src": "../img/hero-2.jpg",
+			"title": "FIGHT THE WEAKNESS", 
+			"desc": "WE GO THE JOURNEY WITH YOU",
+			"position": "C", 
+			"buttons": [
+				{"title": "PRICING", "link": "#", "class": ".bt-orange"},
+				{"title": "LEARN MORE", "link": "#", "class": ".bt-gray"}
+			]
+		},
+		{
+			"src": "../img/hero-3.jpg",
+			"title": "HAVE FUN IN GROUPS", 
+			"desc": "STAY MOTIVATED AND FIND NEW FRIENDS",
+			"position": "C", 
+			"buttons": [
+				{"title": "SEE OUR CLASSES", "link": "#", "class": ".bt-ghost"}
+			]
+		},
+		{
+			"src": "../img/hero-4.jpg",
+			"title": "PERSONAL TRAINING", 
+			"desc": "GET IN SHAPE WITH THE HELP OF A COACH",
+			"position": "L", 
+			"buttons": [
+				{"title": "BOOK NOW", "link": "#", "class": ".bt-ghost"}
+			]
+		}
+	]
+}
