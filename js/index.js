@@ -29,7 +29,10 @@ function mainAjax() {
 function mainInit() {
 	mainPrev = (mainNow == 0) ? mainLast : mainNow - 1;
 	mainNext = (mainNow == mainLast) ? 0 : mainNow + 1;
-	$(htmlMaker(mainNow)).appendTo(".main-wrap").css("position", "static");
+	$(htmlMaker(mainNow)).appendTo(".main-wrap").css({
+		"position": "static",
+		"transition": "translateY 0.5s"
+	});
 	$(htmlMaker(mainPrev)).appendTo(".main-wrap").css("top", "-100%");
 	$(htmlMaker(mainNext)).appendTo(".main-wrap").css("top", "100%");
 }
@@ -91,9 +94,21 @@ function onNaviChildClick() {
 	$(this).children("i").toggleClass("active");
 }
 
+function onMainPrev() {
+	$(".main-wrap > .slide").eq(0).stop();
+	$(".main-wrap > .slide").eq(1).stop();
+}
+
+function onMainNext() {
+
+}
 
 /************ 이벤트선언 *************/
 $(window).resize(onResize).trigger("resize");
+
 $(".header .navi-child").hover(onNaviHover, onNaviLeave);
 $(".header .navi-bars").click(onBarClick);
 $(".header .navi-child-mo").click(onNaviChildClick);
+
+$(".main-wrap > .bt-prev").click(onMainPrev);
+$(".main-wrap > .bt-next").click(onMainNext);

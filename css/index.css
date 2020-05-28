@@ -88,6 +88,9 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 /*********** main-wrap ************/
 .main-wrap {position: relative; transition: top 0.5s; /* overflow: hidden; */}
 .main-wrap > .slide {position: absolute; width: 100%;}
+.main-wrap > .bt {color: #fff; font-size: 2rem; line-height: 56px; width: 60px; height: 60px; text-align: center; border: 2px solid #fff; position: absolute; top: calc(50% - 30px); cursor: pointer; z-index: 900;}
+.main-wrap > .bt.bt-prev {left: 1rem;}
+.main-wrap > .bt.bt-next {right: 1rem;}
 
 
 /*********** 반응형 ************/
