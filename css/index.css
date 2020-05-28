@@ -120,3 +120,11 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 	.header > .logo {width: 260px;}
 	.header > .navi-bars {display: block;}
 }
+
+@media screen and (max-width: 767px) {
+	.main-wrap .slide-content.type-l {left: 20%; width: 60%;}
+	.main-wrap .slide-content > .title {font-size: 2rem;}
+	.main-wrap .slide-content > .desc {font-size: 1rem;}
+	.main-wrap .slide-content.type-l > .title {font-size: 1.5rem;}
+	.main-wrap .slide-content.type-l > .desc {font-size: 0.875rem;}
+}
