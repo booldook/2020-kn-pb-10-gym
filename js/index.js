@@ -1,18 +1,29 @@
-//<div class="slide">
-//<img src="../img/hero-1.jpg" class="img">
-//</div>
 /************ 사전지식 *************/
 
 
 /************ 전역변수 *************/
-var data;
-
+var datas;
 var mainNow = 0;
 var mainLast; 
-
+mainAjax();
 
 
 /************ 사용자함수 *************/
+function mainAjax() {
+	$.get("../json/banner.json", function(res){
+		datas = res.banners;
+		var html = '';
+		// for(var v of datas) {
+		// for(var i=0; i<datas.length; i++){
+		for(var i in datas) {
+			html  = '<div class="slide">';
+			html += '<img src="'+datas[i].src+'" class="img">';
+			html += '</div>';
+			$(".main-wrap").append(html);
+		}
+	});
+}
+
 function fixShow(show) {
 	if(show) {
 		$(".header > .fix-wrap").css("display", "block");
