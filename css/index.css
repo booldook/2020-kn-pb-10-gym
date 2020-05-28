@@ -83,7 +83,12 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .header .subs-mo li {padding: 1rem 3rem; border-bottom: 1px solid #444;}
 .header .subs-mo li::before {display: inline-block; content: "-"; margin-right: 1rem;}
 .header .navi-wrap-mo > li:not(.subs-mo):hover {background-color: #555;} 
-.header .subs-mo li:hover {background-color: #555;} 
+.header .subs-mo li:hover {background-color: #555;}
+
+/*********** main-wrap ************/
+.main-wrap {position: relative;}
+.main-wrap > .slide {position: absolute; width: 100%;}
+
 
 /*********** 반응형 ************/
 @media screen and (max-width: 991px) {

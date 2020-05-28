@@ -42,6 +42,10 @@ function fixShow(show) {
 }
 
 /************ 이벤트콜백 *************/
+function onResize() {
+	$(".main-wrap").css("top", $(".header").outerHeight()+"px");
+}
+
 function onNaviHover() {
 	$(this).find(".subs").stop().fadeIn(500);
 }
@@ -70,7 +74,9 @@ function onNaviChildClick() {
 	$(this).children("i").toggleClass("active");
 }
 
+
 /************ 이벤트선언 *************/
+$(window).resize(onResize).trigger("resize");
 $(".header .navi-child").hover(onNaviHover, onNaviLeave);
 $(".header .navi-bars").click(onBarClick);
 $(".header .navi-child-mo").click(onNaviChildClick);
