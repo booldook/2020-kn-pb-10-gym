@@ -6,7 +6,7 @@
 			"desc": "FREE 30 DAY TRIAL",
 			"class": "type-c", 
 			"buttons": [
-				{"title": "GIVE IT A TRY NOW", "link": "#", "class": ".bt-ghost"}
+				{"title": "GIVE IT A TRY NOW", "link": "#", "class": "bt-ghost"}
 			]
 		},
 		{
@@ -15,8 +15,8 @@
 			"desc": "WE GO THE JOURNEY WITH YOU",
 			"class": "type-c", 
 			"buttons": [
-				{"title": "PRICING", "link": "#", "class": ".bt-orange"},
-				{"title": "LEARN MORE", "link": "#", "class": ".bt-gray"}
+				{"title": "PRICING", "link": "#", "class": "bt-orange"},
+				{"title": "LEARN MORE", "link": "#", "class": "bt-gray"}
 			]
 		},
 		{
@@ -25,7 +25,7 @@
 			"desc": "STAY MOTIVATED AND FIND NEW FRIENDS",
 			"class": "type-c", 
 			"buttons": [
-				{"title": "SEE OUR CLASSES", "link": "#", "class": ".bt-ghost"}
+				{"title": "SEE OUR CLASSES", "link": "#", "class": "bt-ghost"}
 			]
 		},
 		{
@@ -34,7 +34,7 @@
 			"desc": "GET IN SHAPE WITH THE HELP OF A COACH",
 			"class": "type-l", 
 			"buttons": [
-				{"title": "BOOK NOW", "link": "#", "class": ".bt-ghost"}
+				{"title": "BOOK NOW", "link": "#", "class": "bt-ghost"}
 			]
 		}
 	]

@@ -27,7 +27,7 @@ function mainAjax() {
 	});
 }
 
-function mainInit() {
+function mainInit(n) {
 	mainPrev = (mainNow == 0) ? mainLast : mainNow - 1;
 	mainNext = (mainNow == mainLast) ? 0 : mainNow + 1;
 	$(".main-wrap").find(".slide").remove();
@@ -118,16 +118,18 @@ function onNaviChildClick() {
 function onMainPrev() {
 	$(".main-wrap > .slide").eq(0).css("transform", "translateY(100px)");
 	$(".main-wrap > .slide").eq(1).stop().animate({"top": 0}, 500, function() {
+		var old = mainNow;
 		mainNow = (mainNow == 0) ? mainLast : mainNow - 1;
-		mainInit();
+		mainInit(old);
 	});
 }
 
 function onMainNext() {
 	$(".main-wrap > .slide").eq(0).css("transform", "translateY(-100px)");
 	$(".main-wrap > .slide").eq(2).stop().animate({"top": 0}, 500, function() {
+		var old = mainNow;
 		mainNow = (mainNow == mainLast) ? 0 : mainNow + 1;
-		mainInit();
+		mainInit(old);
 	});
 }
 
@@ -151,7 +153,9 @@ function onPagerClick() {
 	$(".main-wrap > .slide").not($(".main-wrap > .slide").eq(0)).remove();
 	$(htmlMaker(mainNow)).appendTo(".main-wrap").css("top", target[0]);
 	$(".main-wrap > .slide").eq(0).css("transform", "translateY("+target[1]+")");
-	$(".main-wrap > .slide").eq(1).stop().animate({"top": 0}, 500, mainInit);
+	$(".main-wrap > .slide").eq(1).stop().animate({"top": 0}, 500, function() {
+		mainInit(mainNow);
+	});
 }
 
 
