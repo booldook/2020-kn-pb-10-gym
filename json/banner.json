@@ -2,7 +2,7 @@
 	"banners": [
 		{
 			"src": "../img/hero-1.jpg", 
-			"title": "THE BEST GYM YOU WILL EVER FIND", 
+			"title": "THE BEST GYM<br>YOU WILL EVER FIND", 
 			"desc": "FREE 30 DAY TRIAL",
 			"class": "type-c", 
 			"buttons": [
