@@ -29,9 +29,10 @@ function mainAjax() {
 function mainInit() {
 	mainPrev = (mainNow == 0) ? mainLast : mainNow - 1;
 	mainNext = (mainNow == mainLast) ? 0 : mainNow + 1;
+	$(".main-wrap").find(".slide").remove();
 	$(htmlMaker(mainNow)).appendTo(".main-wrap").css({
 		"position": "static",
-		"transition": "translateY 0.5s"
+		"transition": "transform 0.5s"
 	});
 	$(htmlMaker(mainPrev)).appendTo(".main-wrap").css("top", "-100%");
 	$(htmlMaker(mainNext)).appendTo(".main-wrap").css("top", "100%");
@@ -95,12 +96,19 @@ function onNaviChildClick() {
 }
 
 function onMainPrev() {
-	$(".main-wrap > .slide").eq(0).stop();
-	$(".main-wrap > .slide").eq(1).stop();
+	$(".main-wrap > .slide").eq(0).css("transform", "translateY(100px)");
+	$(".main-wrap > .slide").eq(1).stop().animate({"top": 0}, 500, function() {
+		mainNow = (mainNow == 0) ? mainLast : mainNow - 1;
+		mainInit();
+	});
 }
 
 function onMainNext() {
-
+	$(".main-wrap > .slide").eq(0).css("transform", "translateY(-100px)");
+	$(".main-wrap > .slide").eq(2).stop().animate({"top": 0}, 500, function() {
+		mainNow = (mainNow == mainLast) ? 0 : mainNow + 1;
+		mainInit();
+	});
 }
 
 /************ 이벤트선언 *************/
