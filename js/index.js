@@ -1,10 +1,19 @@
 /************ 사전지식 *************/
-
+/* 
+// for(var v of datas) {
+// for(var i in datas) {
+for(var i=0; i<datas.length; i++){
+	html  = '<div class="slide">';
+	html += '<img src="'+datas[i].src+'" class="img">';
+	html += '</div>';
+	$(".main-wrap").append(html);
+} 
+*/
 
 /************ 전역변수 *************/
 var datas;
 var mainNow = 0;
-var mainLast; 
+var mainPrev, mainNext, mainLast;
 mainAjax();
 
 
@@ -12,16 +21,24 @@ mainAjax();
 function mainAjax() {
 	$.get("../json/banner.json", function(res){
 		datas = res.banners;
-		var html = '';
-		// for(var v of datas) {
-		// for(var i=0; i<datas.length; i++){
-		for(var i in datas) {
-			html  = '<div class="slide">';
-			html += '<img src="'+datas[i].src+'" class="img">';
-			html += '</div>';
-			$(".main-wrap").append(html);
-		}
+		mainLast = datas.length - 1;
+		mainInit();
 	});
+}
+
+function mainInit() {
+	mainPrev = (mainNow == 0) ? mainLast : mainNow - 1;
+	mainNext = (mainNow == mainLast) ? 0 : mainNow + 1;
+	$(htmlMaker(mainNow)).appendTo(".main-wrap").css("position", "static");
+	$(htmlMaker(mainPrev)).appendTo(".main-wrap").css("top", "-100%");
+	$(htmlMaker(mainNext)).appendTo(".main-wrap").css("top", "100%");
+}
+
+function htmlMaker(n) {
+	html  = '<div class="slide">';
+	html += '<img src="'+datas[n].src+'" class="img">';
+	html += '</div>';
+	return html;
 }
 
 function fixShow(show) {

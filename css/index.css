@@ -8,7 +8,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 
 /*********** .header ************/
-.header {width: 100%; position: fixed; z-index: 999; padding: 0 2rem; color: #777; border-bottom: 1px solid #ddd; background-color: #fff;}
+.header {width: 100%; position: fixed; z-index: 999; padding: 0 2rem; color: #777; border-bottom: 1px solid #ddd; background-color: #fff; opacity: 0.5;}
 .header > .logo {float: left; width: 200px;}
 .header > .sns-wrap {float: right; padding: 1.125rem 0 0.5rem 1rem;}
 .header > .navi-wrap {float: right; font-size: 0.875rem;}
@@ -86,7 +86,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .header .subs-mo li:hover {background-color: #555;}
 
 /*********** main-wrap ************/
-.main-wrap {position: relative;}
+.main-wrap {position: relative; transition: top 0.5s; /* overflow: hidden; */}
 .main-wrap > .slide {position: absolute; width: 100%;}
 
 
