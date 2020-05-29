@@ -101,6 +101,17 @@ function fixShow(show) {
 /************ 이벤트콜백 *************/
 function onResize() {
 	$(".main-wrap").css("margin-top", $(".header").outerHeight() + "px");
+	/*
+	for(var i=0, adHei=0; i<$(".ad-wrap>.ad").length; i++) {
+		adHei = ($(".ad-wrap>.ad").eq(i).outerHeight() > adHei) 
+		? $(".ad-wrap>.ad").eq(i).outerHeight() 
+		: adHei;
+		console.log(adHei);
+	}
+	$(".ad-wrap > .ad").each(function(){
+		$(this).outerHeight(adHei);
+	});
+	*/
 }
 
 function onNaviHover() {

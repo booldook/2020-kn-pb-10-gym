@@ -114,8 +114,8 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .main-wrap .slide-content > .bts > a.bt-gray {background-color: #eee; color: #222;}
 
 /*********** ad-wrap ************/
-.ad-wrap {border: 1px solid blue;}
-.ad-wrap > .ad {float: left; width: 33.3333%; padding: 4rem 2.5rem; color: #fff; border: 1px solid red;}
+.ad-wrap {display: table; width: 100%;}
+.ad-wrap > .ad {width: 33.3333%; padding: 4rem 2.5rem; color: #fff; display: table-cell; vertical-align: top;}
 .ad-wrap > :nth-child(1) {background-color: #d63d2d;}
 .ad-wrap > :nth-child(2) {background-color: #292929;}
 .ad-wrap > :nth-child(3) {background-color: #3c3c3c;}
@@ -141,4 +141,6 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 	.main-wrap .slide-content > .desc {font-size: 1rem;}
 	.main-wrap .slide-content.type-l > .title {font-size: 1.5rem;}
 	.main-wrap .slide-content.type-l > .desc {font-size: 0.875rem;}
+	.ad-wrap {display: block;}
+	.ad-wrap > .ad {width: 100%; display: block;}
 }
