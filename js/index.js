@@ -195,4 +195,10 @@ $(".header .navi-child-mo").click(onNaviChildClick);
 $(".main-wrap > .bt-prev").click(onMainPrev);
 $(".main-wrap > .bt-next").click(onMainNext);
 
-$("section").imagesLoaded(onResize);
+//$("section").imagesLoaded(onResize);
+
+/* $('.class-wrap .classes').masonry({
+  itemSelector: '.class',
+  columnWidth: '.class-sizer',
+  percentPosition: true
+}) */
