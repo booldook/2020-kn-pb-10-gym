@@ -6,6 +6,7 @@ ul, ol {list-style: none;}
 
 /*********** 공통사항 ***********/
 .clear::after {content: ""; display: block; clear: both;}
-.img {width: 100%;}
+.img {width: 100%; height: auto;}
 .imgx {max-width: 100%;}
+.imgv {height: 100%; width: auto;}
 .pointer {cursor: pointer;}

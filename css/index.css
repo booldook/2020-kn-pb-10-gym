@@ -137,6 +137,17 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .welcome-wrap .bt-more:hover {padding-right: 3rem; background-color: #d30;}
 .welcome-wrap .bt-more:hover > .fa {display: inline-block;}
 
+/*********** class-wrap ************/
+.classes {background-color: #111; padding: 0.5%;}
+.classes .class {float: left; width: 32.3333%; margin: 0.5%; overflow: hidden; position: relative; cursor: pointer;}
+.classes .class img {position: relative; left: 50%; transform: translateX(-50%); opacity: 0.6; transition: all 0.5s;}
+.classes .class .title {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-family: 'Oswald', sans-serif; font-size: 1.5rem; transition: all 0.5s;}
+.classes .class:hover > img {opacity: 1; transform: translateX(-50%) scale(1.1);}
+.classes .class:hover > .title {opacity: 0;}
+
+
+
+
 
 
 /*********** 반응형 ************/
@@ -149,7 +160,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 @media screen and (max-width: 767px) {
 	.wrapper-small .desc {width: 100%;}
-	
+
 	.main-wrap .slide-content.type-l {left: 20%; width: 60%;}
 	.main-wrap .slide-content > .title {font-size: 2rem;}
 	.main-wrap .slide-content > .desc {font-size: 1rem;}
@@ -157,4 +168,9 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 	.main-wrap .slide-content.type-l > .desc {font-size: 0.875rem;}
 	.ad-wrap {display: block;}
 	.ad-wrap > .ad {width: 100%; display: block;}
+}
+
+@media screen and (max-width: 500px) {
+	.header > .sns-wrap {display: none;}
+	.header > .navi-bars {right: 0;}
 }
