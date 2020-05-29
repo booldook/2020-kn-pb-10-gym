@@ -8,6 +8,19 @@ for(var i=0; i<datas.length; i++){
 	html += '</div>';
 	$(".main-wrap").append(html);
 } 
+
+$(".section").each(function(i){
+	var $obj = $(this);
+	if(i == 0) {
+		$(this).css("top", $(this).prev().outerHeight() + "px");
+	}
+	else {
+		setTimeout(function(){
+			var top = $obj.prev().offset().top + $obj.prev().outerHeight();
+			$obj.css("top", top+"px");
+		}, i * 300);
+	}
+}); 
 */
 
 /************ 전역변수 *************/
@@ -87,18 +100,7 @@ function fixShow(show) {
 
 /************ 이벤트콜백 *************/
 function onResize() {
-	$(".section").each(function(i){
-		var $obj = $(this);
-		if(i == 0) {
-			$(this).css("top", $(this).prev().outerHeight() + "px");
-		}
-		else {
-			setTimeout(function(){
-				var top = $obj.prev().offset().top + $obj.prev().outerHeight();
-				$obj.css("top", top+"px");
-			}, i * 300);
-		}
-	});
+	$(".main-wrap").css("margin-top", $(".header").outerHeight() + "px");
 }
 
 function onNaviHover() {
