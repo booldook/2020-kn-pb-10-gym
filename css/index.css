@@ -138,8 +138,8 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .welcome-wrap .bt-more:hover > .fa {display: inline-block;}
 
 /*********** class-wrap ************/
-.classes {background-color: #111; padding: 0.5%; width: 100%;}
-.classes > .class, .classes > .class-sizer {float: left; width: 32.3333%; margin: 0.5%; overflow: hidden; position: relative; cursor: pointer;}
+.classes {background-color: #111; width: 100%;}
+.classes .class, .classes > .class-sizer {float: left; width: 32.3333%; margin: 0.5%; overflow: hidden; position: relative; cursor: pointer;}
 .classes .class img {position: relative; left: 50%; transform: translateX(-50%); opacity: 0.6; transition: all 0.5s;}
 .classes .class .title {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-family: 'Oswald', sans-serif; font-size: 1.5rem; transition: all 0.5s;}
 .classes .class:hover > img {opacity: 1; transform: translateX(-50%) scale(1.1);}

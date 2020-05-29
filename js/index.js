@@ -101,8 +101,8 @@ function fixShow(show) {
 /************ 이벤트콜백 *************/
 function onResize() {
 	$(".main-wrap").css("margin-top", $(".header").outerHeight() + "px");
-	var classHei = $(".class-wrap .class").eq(0).outerWidth() * 0.75;
-	$(".class-wrap .class").outerHeight(classHei);
+	var classHei = $(".class-wrap .item").eq(0).outerWidth() * 0.75;
+	$(".class-wrap .item").outerHeight(classHei);
 	/*
 	for(var i=0, adHei=0; i<$(".ad-wrap>.ad").length; i++) {
 		adHei = ($(".ad-wrap>.ad").eq(i).outerHeight() > adHei) 
@@ -195,10 +195,13 @@ $(".header .navi-child-mo").click(onNaviChildClick);
 $(".main-wrap > .bt-prev").click(onMainPrev);
 $(".main-wrap > .bt-next").click(onMainNext);
 
-//$("section").imagesLoaded(onResize);
+$("section").imagesLoaded(onResize);
 
-/* $('.class-wrap .classes').masonry({
-  itemSelector: '.class',
-  columnWidth: '.class-sizer',
-  percentPosition: true
-}) */
+
+var $masonry = $(".classes").imagesLoaded(function(){
+	$masonry.masonry({
+		itemSelector: '.class',
+		columnWidth: '.class-sizer',
+		percentPosition: true
+	});
+});
