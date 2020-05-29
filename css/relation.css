@@ -1,0 +1,2 @@
+.wrapper {max-width: 1200px; margin: auto; position: relative;}
+.box {padding: 5%; border: 5px solid blue; text-align: center; font-size: 2rem; line-height: 1.8; position: absolute; transition: top 0.3s;}
