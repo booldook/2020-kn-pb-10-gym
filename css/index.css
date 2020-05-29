@@ -6,6 +6,9 @@ font-family: 'Oswald', sans-serif;
 /*********** 공통사항 ************/
 html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .red-dot {color: #f30;}
+.wrapper-small {padding: 7rem 10%; text-align: center;}
+.wrapper-small .title {font-size: 3rem; font-family: 'Oswald', sans-serif;}
+.wrapper-small .desc {width: 50%; margin: 2rem auto;}
 
 
 /*********** .header ************/
@@ -127,10 +130,8 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .ad-wrap .desc {line-height: 1.75rem;}
 
 /*********** welcome-wrap ************/
-.welcome-wrap {background: #000 url(../img/bg1.jpg) no-repeat center; text-align: center; color: #fff; background-attachment: fixed;}
-.welcome-wrap .welcome {background-color: rgba(0,0,0,0.6); padding: 7rem 1rem;}
-.welcome-wrap .title {font-size: 3rem; font-family: 'Oswald', sans-serif;}
-.welcome-wrap .desc {width: 40%; margin: 2rem auto;}
+.welcome-wrap {background: #000 url(../img/bg1.jpg) no-repeat center; color: #fff; background-attachment: fixed;}
+.welcome-wrap .welcome {background-color: rgba(0,0,0,0.6);}
 .welcome-wrap .bt-more {border: none; outline: none; background-color: #f30; padding: 1rem 2rem; color: inherit; transition: all 0.5s; cursor: pointer; text-align: center; position: relative;}
 .welcome-wrap .bt-more > .fa {display: none; position: absolute; right: 1.5rem; top: 1.125rem;}
 .welcome-wrap .bt-more:hover {padding-right: 3rem; background-color: #d30;}
@@ -147,6 +148,8 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 }
 
 @media screen and (max-width: 767px) {
+	.wrapper-small .desc {width: 100%;}
+	
 	.main-wrap .slide-content.type-l {left: 20%; width: 60%;}
 	.main-wrap .slide-content > .title {font-size: 2rem;}
 	.main-wrap .slide-content > .desc {font-size: 1rem;}
