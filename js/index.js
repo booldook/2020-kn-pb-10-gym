@@ -87,7 +87,18 @@ function fixShow(show) {
 
 /************ 이벤트콜백 *************/
 function onResize() {
-	$(".main-wrap").css("top", $(".header").outerHeight()+"px");
+	$(".section").each(function(i){
+		var $obj = $(this);
+		if(i == 0) {
+			$(this).css("top", $(this).prev().outerHeight() + "px");
+		}
+		else {
+			setTimeout(function(){
+				var top = $obj.prev().offset().top + $obj.prev().outerHeight();
+				$obj.css("top", top+"px");
+			}, i * 300);
+		}
+	});
 }
 
 function onNaviHover() {
@@ -168,3 +179,5 @@ $(".header .navi-child-mo").click(onNaviChildClick);
 
 $(".main-wrap > .bt-prev").click(onMainPrev);
 $(".main-wrap > .bt-next").click(onMainNext);
+
+$(".section").imagesLoaded(onResize);
