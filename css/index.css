@@ -115,6 +115,15 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 /*********** ad-wrap ************/
 .ad-wrap {border: 1px solid blue;}
+.ad-wrap > .ad {float: left; width: 33.3333%; padding: 4rem 2.5rem; color: #fff; border: 1px solid red;}
+.ad-wrap > :nth-child(1) {background-color: #d63d2d;}
+.ad-wrap > :nth-child(2) {background-color: #292929;}
+.ad-wrap > :nth-child(3) {background-color: #3c3c3c;}
+.ad-wrap .icon {float: left; width: 80px; height: 80px; border: 2px solid #fff; border-radius: 50%; font-size: 1.5rem; text-align: center; line-height: 76px; }
+.ad-wrap .content {float: right; width: calc(100% - 100px);}
+.ad-wrap .title {font-size: 1.5rem; font-family: 'Oswald', sans-serif; margin-bottom: 0.5rem;}
+.ad-wrap .title > span {color: #f30;}
+.ad-wrap .desc {line-height: 1.75rem;}
 
 
 
