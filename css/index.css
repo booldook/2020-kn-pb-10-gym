@@ -5,6 +5,7 @@ font-family: 'Oswald', sans-serif;
 */
 /*********** 공통사항 ************/
 html, body {font-family: 'Lato', sans-serif; height: 5000px;}
+.red-dot {color: #f30;}
 
 
 /*********** .header ************/
@@ -124,6 +125,16 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .ad-wrap .title {font-size: 1.5rem; font-family: 'Oswald', sans-serif; margin-bottom: 0.5rem;}
 .ad-wrap .title > span {color: #f30;}
 .ad-wrap .desc {line-height: 1.75rem;}
+
+/*********** welcome-wrap ************/
+.welcome-wrap {background: #000 url(../img/bg1.jpg) no-repeat center; text-align: center; color: #fff; background-attachment: fixed;}
+.welcome-wrap .welcome {background-color: rgba(0,0,0,0.6); padding: 7rem 1rem;}
+.welcome-wrap .title {font-size: 3rem; font-family: 'Oswald', sans-serif;}
+.welcome-wrap .desc {width: 40%; margin: 2rem auto;}
+.welcome-wrap .bt-more {border: none; outline: none; background-color: #f30; padding: 1rem 2rem; color: inherit; transition: all 0.5s; cursor: pointer; text-align: center; position: relative;}
+.welcome-wrap .bt-more > .fa {display: none; position: absolute; right: 1.5rem; top: 1.125rem;}
+.welcome-wrap .bt-more:hover {padding-right: 3rem; background-color: #d30;}
+.welcome-wrap .bt-more:hover > .fa {display: inline-block;}
 
 
 
