@@ -14,6 +14,7 @@
 	<script src="../js/imagesloaded.pkgd.min.js"></script>
 	<script src="../js/masonry.pkgd.min.js"></script>
 	<script src="../js/jquery.mb.YTPlayer.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -182,8 +183,10 @@
 		<section class="contact-wrap wrapper-small">
 			<h2 class="title">SUBSCRIBE TO OUR NEWSLETTER<span class="red-dot">.</span></h2>
 			<form action="#" class="contact-form">
-				<input type="text" class="input red w200" name="name" placeholder="Name*">
+				<input type="hidden" name="contact_number">
+				<input type="text" class="input red w150" name="name" placeholder="Name*">
 				<input type="text" class="input orange w200" name="email" placeholder="Email*">
+				<input type="text" class="input orange w200" name="msg" placeholder="Message*">
 				<button class="button red w200">Subscribe</button>
 			</form>
 		</section><!-- contact-wrap -->

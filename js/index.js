@@ -29,6 +29,8 @@ var mainNow = 0;
 var mainPrev, mainNext, mainLast;
 mainAjax();
 
+emailjs.init('user_TROFqVnbPGZyygPAci7nt');
+
 
 /************ 사용자함수 *************/
 function mainAjax() {
@@ -183,7 +185,19 @@ function onPagerClick() {
 	$(".main-wrap > .slide").eq(1).stop().animate({"top": 0}, 500, mainInit);
 }
 
+function onMasonry(){
+	$masonry.masonry({
+		itemSelector: '.class',
+		columnWidth: '.class-sizer',
+		percentPosition: true
+	});
+}
 
+function onContact(event) {
+	event.preventDefault();
+	this.contact_number.value = Math.random() * 100000 | 0;
+	emailjs.sendForm('contact_service', 'contact_form', this);
+}
 
 /************ 이벤트선언 *************/
 $(window).resize(onResize).trigger("resize");
@@ -197,11 +211,6 @@ $(".main-wrap > .bt-next").click(onMainNext);
 
 $("section").imagesLoaded(onResize);
 
+var $masonry = $(".classes").imagesLoaded(onMasonry);
 
-var $masonry = $(".classes").imagesLoaded(function(){
-	$masonry.masonry({
-		itemSelector: '.class',
-		columnWidth: '.class-sizer',
-		percentPosition: true
-	});
-});
+$('#contact-form').submit(onContact);
