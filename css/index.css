@@ -7,8 +7,8 @@ font-family: 'Oswald', sans-serif;
 html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .red-dot {color: #f30;}
 .wrapper-small {max-width: 1200px; margin: auto; padding: 7rem 10%; text-align: center;}
-.wrapper-small .title {font-size: 3rem; font-family: 'Oswald', sans-serif;}
-.wrapper-small .desc {width: 50%; margin: 2rem auto;}
+.wrapper-small > .title {font-size: 3rem; font-family: 'Oswald', sans-serif;}
+.wrapper-small > .desc {width: 50%; margin: 2rem auto;}
 
 
 /*********** .header ************/
@@ -158,10 +158,28 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 #background {padding-bottom: 0 !important; height: auto !important;}
 
 .about-wrap .icon-wrap {margin-top: 3rem;}
-.about-wrap .icons {float: left; width: 20%; padding: 0; text-align: center;}
+.about-wrap .icons {float: left; width: 20%; padding: 0; text-align: center; position: relative; cursor: pointer;}
 .about-wrap .icon {width: 100px; height: 100px; border: 2px solid #666; border-radius: 50%; font-size: 2.25rem; display: table; margin: auto;}
+.about-wrap .desc-hover {width: 100%; padding: 0.75rem; background-color: rgba(0,0,0,0.7); position: absolute; top: -150px; opacity: 0; transition: all 0.5s; visibility: hidden;}
+.about-wrap .icons:hover .desc-hover {top: -100px; opacity: 1; visibility: visible;}
 .about-wrap .icons .desc {font-family: 'Oswald', sans-serif;}
 .about-wrap .icon > i {display: table-cell; text-align: center; vertical-align: middle;}
+
+
+/*********** info-wrap ************/
+.info-wrap ul.infos {display: table; width: 100%;}
+.info-wrap li.info {display: table-cell; width: 33.3333%; padding: 3em 1em; text-align: center; vertical-align: middle; font-size: 1rem;}
+.info-wrap li.info:nth-child(2) {background-color: #333; color: #fff;}
+.info-wrap li.info:nth-child(3) {background-color: #666; color: #fff;}
+.info-wrap .title {font-size: 3em; font-weight: normal;}
+.info-wrap .title > .gray-dot {font-size: 0.75em; color: #aaa;}
+.info-wrap .desc {font-size: 1.5em;}
+
+/*********** footer-wrap ************/
+.footer-wrap {background-color: #111;}
+.footer-wrap .infos {width: 100%; display: table; color: #fff;}
+.footer-wrap .info {display: table-cell; width: 33.3333%; text-align: left; vertical-align: top;}
+
 
 
 
