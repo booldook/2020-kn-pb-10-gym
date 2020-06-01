@@ -34,7 +34,6 @@ mainAjax();
 emailjs.init('user_TROFqVnbPGZyygPAci7nt');
 $('#background').YTPlayer();
 
-
 /************ 사용자함수 *************/
 function mainAjax() {
 	$.get("../json/banner.json", function(res){
@@ -119,6 +118,19 @@ function onResize() {
 		$(this).outerHeight(adHei);
 	});
 	*/
+}
+
+function onScroll() {
+	var scTop = $(this).scrollTop();
+	var sum = scTop + $(this).innerHeight() - 200;
+
+	$(".ani").each(function(){
+		if(sum > $(this).offset().top) {
+			if($(this).hasClass("pers")) $(this).parent().css("perspective", "400px");
+			
+			$(this).css("animation-play-state", "running");
+		}
+	});
 }
 
 function onNaviHover() {
@@ -206,6 +218,7 @@ function onContact(event) {
 
 /************ 이벤트선언 *************/
 $(window).resize(onResize).trigger("resize");
+$(window).scroll(onScroll).trigger("scroll");
 
 $(".header .navi-child").hover(onNaviHover, onNaviLeave);
 $(".header .navi-bars").click(onBarClick);

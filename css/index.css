@@ -155,7 +155,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 /*********** about-wrap ************/
 .about-wrap {background-color: #000; color: #fff;}
 .about-wrap .desc {width: 80%; margin: 1rem auto;}
-.about-wrap .inline-YTPlayer {max-width: 100% !important;}
+.inline-YTPlayer {max-width: 100% !important;}
 #background {padding-bottom: 0 !important; height: auto !important;}
 
 .about-wrap .icon-wrap {margin-top: 3rem;}
@@ -201,6 +201,24 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .copy-wrap .sns-footer .insta-icon:hover {background-color: #b6751f; color: #fff;}
 .copy-wrap .sns-footer .mail-icon:hover {background-color: #1b9b41; color: #fff;}
 
+/*********** 애니메이션 ************/
+.ani {animation-fill-mode: forwards; animation-duration: 0.5s; animation-play-state: paused;}
+
+.pers-bottom {opacity: 0; transform-style: preserve-3d; transform: rotateX(-90deg); transform-origin: 0 150%; animation-name: persBottom;}
+@keyframes persBottom {
+	0% {transform: rotateX(-90deg); opacity: 0;}
+	100% {transform: rotateX(0deg); opacity: 1;}
+}
+
+.scale-up {opacity: 0; transform: scale(0); animation-name: scaleUp; animation-duration: 0.5s; animation-fill-mode: forwards;}
+@keyframes scaleUp {
+	0% {transform: scale(0); opacity: 0;}
+	92% {transform: scale(1.2); opacity: 1;}
+	94% {transform: scale(0.9); opacity: 1;}
+	96% {transform: scale(1.1); opacity: 1;}
+	98% {transform: scale(0.95); opacity: 1;}
+	100% {transform: scale(1); opacity: 1;}
+}
 
 
 
