@@ -136,9 +136,21 @@ function onScroll() {
 	if(	sum > $(".info-wrap").offset().top &&	infoChk ) {
 		infoChk = false;
 		$(".info-wrap").find(".title").each(function(){
-			setInterval(function(){
-				$(arguments[0]).html(Number($(arguments[0]).html()) + 1);
-			}, Number($(this).data("speed")), $(this).find("span").eq(0));
+			var speed = Number($(this).data("speed"));
+			var $obj = $(this).find("span").eq(0);
+			var gap = Number($(this).data("gap"));
+			var target = Number($(this).data("target"));
+			var interval = setInterval(function(){
+				var value = Number($obj.html());
+				$obj.html(value + gap);
+				if(value >= target) {
+					clearInterval(interval);
+					$obj.html(target);
+					if(target == 1999) {
+						$obj.html($obj.html().substr(0, 2) + ',' + $obj.html().substr(2, 2)); 
+					}
+				}
+			}, speed);
 		});
 	}
 }
