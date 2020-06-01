@@ -147,8 +147,8 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .classes .class:hover > img {opacity: 1; transform: translateX(-50%) scale(1.1);}
 .classes .class:hover > .title {opacity: 0;}
 
-
-
+/*********** contact-wrap ************/
+.contact-wrap form {margin-top: 1rem;}
 
 
 
