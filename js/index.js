@@ -196,7 +196,7 @@ function onMasonry(){
 function onContact(event) {
 	event.preventDefault();
 	this.contact_number.value = Math.random() * 100000 | 0;
-	emailjs.sendForm('contact_service', 'contact_form', this);
+	emailjs.sendForm('gmail', 'gym-temp', this);
 }
 
 /************ 이벤트선언 *************/
@@ -213,4 +213,4 @@ $("section").imagesLoaded(onResize);
 
 var $masonry = $(".classes").imagesLoaded(onMasonry);
 
-$('#contact-form').submit(onContact);
+$('#contactForm').submit(onContact);
