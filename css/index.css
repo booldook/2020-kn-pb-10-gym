@@ -7,7 +7,7 @@ font-family: 'Oswald', sans-serif;
 html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .red-dot {color: #f30;}
 .wrapper-small {max-width: 1200px; margin: auto; padding: 7rem 10%; text-align: center;}
-.wrapper-small > .title {font-size: 3rem; font-family: 'Oswald', sans-serif;}
+.wrapper-small > .title {font-size: 3rem; font-family: 'Oswald', sans-serif; line-height: 1.1;}
 .wrapper-small > .desc {width: 50%; margin: 2rem auto;}
 
 
@@ -149,6 +149,7 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 /*********** contact-wrap ************/
 .contact-wrap form {margin-top: 1rem;}
+.contact-wrap input {margin-bottom: 0.5rem;}
 
 
 /*********** about-wrap ************/
@@ -223,6 +224,28 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 	.ad-wrap > .ad {width: 100%; display: block;}
 	.classes .class, 
 	.classes .class-sizer {width: 49%;}
+
+	.contact-wrap input[name="name"] {width: 49%; float: left;}
+	.contact-wrap input[name="email"] {width: 49%; float: right;}
+	.contact-wrap input[name="msg"] {width: 100%;}
+	.contact-wrap button {width: 100%;}
+
+	.about-wrap .icons {float: none; width: 50%; margin: auto;}
+
+	.info-wrap ul.infos {display: block;}
+	.info-wrap li.info {display: block; width: 100%;}
+
+	.footer-wrap .infos {display: block;}
+	.footer-wrap .info {display: block; width: 100%; margin-bottom: 3rem;}
+	.footer-wrap .info:nth-child(1) {padding-right: 0;}
+	.footer-wrap .info:nth-child(2) {padding: 0;}
+	.footer-wrap .info:nth-child(3) {padding-left: 0;}
+
+	.copy-wrap {text-align: center;}
+	.copy-wrap .copyright {float: none; width: 100%; padding: 0.25rem;} 
+	.copy-wrap .sns-footer {float: none; width: 100%; padding: 0.25rem; margin-top: 0;} 
+	.copy-wrap .sns-footer > li {float: none; display: inline-block;} 
+	.copy-wrap .navis-footer {float: none; width: 100%; padding: 0.25rem;}
 }
 
 @media screen and (max-width: 500px) {
