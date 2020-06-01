@@ -6,7 +6,7 @@ font-family: 'Oswald', sans-serif;
 /*********** 공통사항 ************/
 html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .red-dot {color: #f30;}
-.wrapper-small {padding: 7rem 10%; text-align: center;}
+.wrapper-small {max-width: 1200px; margin: auto; padding: 7rem 10%; text-align: center;}
 .wrapper-small .title {font-size: 3rem; font-family: 'Oswald', sans-serif;}
 .wrapper-small .desc {width: 50%; margin: 2rem auto;}
 
@@ -149,6 +149,12 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 /*********** contact-wrap ************/
 .contact-wrap form {margin-top: 1rem;}
+
+
+/*********** about-wrap ************/
+.about-wrap {background-color: #000; color: #fff;}
+.about-wrap .desc {width: 80%; margin: 1rem auto;}
+.about-wrap .wrapper-small {border: 1px solid yellow;}
 
 
 

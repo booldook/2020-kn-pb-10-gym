@@ -27,9 +27,12 @@ $(".section").each(function(i){
 var datas;
 var mainNow = 0;
 var mainPrev, mainNext, mainLast;
-mainAjax();
 
+
+/************ Initialize *************/
+mainAjax();
 emailjs.init('user_TROFqVnbPGZyygPAci7nt');
+$('#background').YTPlayer();
 
 
 /************ 사용자함수 *************/
