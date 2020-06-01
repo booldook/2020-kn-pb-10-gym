@@ -177,8 +177,14 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 
 /*********** footer-wrap ************/
 .footer-wrap {background-color: #111;}
-.footer-wrap .infos {width: 100%; display: table; color: #fff;}
-.footer-wrap .info {display: table-cell; width: 33.3333%; text-align: left; vertical-align: top;}
+.footer-wrap .infos {width: 100%; display: table; color: #bbb;}
+.footer-wrap .info {display: table-cell; width: 33.3333%; text-align: left; vertical-align: top; font-size: 1rem; line-height: 1.5;}
+.footer-wrap .title {color: #777; padding: 0.25em 0; border-top: 1px solid #777; border-bottom: 1px solid #777; font-family: 'Oswald', sans-serif; font-size: 1.25em;}
+.footer-wrap a {text-decoration: none; color: inherit;}
+.footer-wrap .desc {margin-top: 1.5em;}
+.footer-wrap .info:nth-child(1) {padding-right: 4%;}
+.footer-wrap .info:nth-child(2) {padding: 0 2%;}
+.footer-wrap .info:nth-child(3) {padding-left: 4%;}
 
 
 
