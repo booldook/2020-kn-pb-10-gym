@@ -155,6 +155,8 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .about-wrap {background-color: #000; color: #fff;}
 .about-wrap .desc {width: 80%; margin: 1rem auto;}
 .about-wrap .wrapper-small {border: 1px solid yellow;}
+.about-wrap .inline-YTPlayer {max-width: 100% !important;}
+#background {padding-bottom: 0 !important; height: auto !important;}
 
 
 
