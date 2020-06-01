@@ -197,6 +197,8 @@ function onContact(event) {
 	event.preventDefault();
 	this.contact_number.value = Math.random() * 100000 | 0;
 	emailjs.sendForm('gmail', 'gym-temp', this);
+	alert("Subscribe 신청이 완료되었습니다.");
+	this.reset();
 }
 
 /************ 이벤트선언 *************/
