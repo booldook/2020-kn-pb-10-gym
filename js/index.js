@@ -120,6 +120,7 @@ function onResize() {
 	*/
 }
 
+var infoChk = true;
 function onScroll() {
 	var scTop = $(this).scrollTop();
 	var sum = scTop + $(this).innerHeight() - 200;
@@ -127,10 +128,19 @@ function onScroll() {
 	$(".ani").each(function(){
 		if(sum > $(this).offset().top) {
 			if($(this).hasClass("pers")) $(this).parent().css("perspective", "400px");
-			
+
 			$(this).css("animation-play-state", "running");
 		}
 	});
+
+	if(	sum > $(".info-wrap").offset().top &&	infoChk ) {
+		infoChk = false;
+		$(".info-wrap").find(".title").each(function(){
+			setInterval(function(){
+				$(arguments[0]).html(Number($(arguments[0]).html()) + 1);
+			}, Number($(this).data("speed")), $(this).find("span").eq(0));
+		});
+	}
 }
 
 function onNaviHover() {
