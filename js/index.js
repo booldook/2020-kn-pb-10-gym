@@ -27,6 +27,7 @@ $(".section").each(function(i){
 var datas;
 var mainNow = 0;
 var mainPrev, mainNext, mainLast;
+var infoChk = true; 	// info-wrap의 애니메이션 진행여부(true면 진행, flase면 무시)
 
 
 /************ Initialize *************/
@@ -120,24 +121,24 @@ function onResize() {
 	*/
 }
 
-var infoChk = true;
+
 function onScroll() {
 	var scTop = $(this).scrollTop();
-	var sum = scTop + $(this).innerHeight() - 200;
+	var bottom = scTop + $(this).innerHeight() - 200;
 
 	$(".ani").each(function(){
-		if(sum > $(this).offset().top) {
+		if(bottom > $(this).offset().top) { // .ani가 화면에 나타나면
 			if($(this).hasClass("pers")) $(this).parent().css("perspective", "400px");
-
+			if($(this).data("delay")) $(this).css("animation-delay", $(this).data("delay"));
 			$(this).css("animation-play-state", "running");
 		}
 	});
 
-	if(	sum > $(".info-wrap").offset().top &&	infoChk ) {
+	if(	bottom > $(".info-wrap").offset().top &&	infoChk ) {
 		infoChk = false;
 		$(".info-wrap").find(".title").each(function(){
-			var speed = Number($(this).data("speed"));
 			var $obj = $(this).find("span").eq(0);
+			var speed = Number($(this).data("speed"));
 			var gap = Number($(this).data("gap"));
 			var target = Number($(this).data("target"));
 			var interval = setInterval(function(){
@@ -146,7 +147,7 @@ function onScroll() {
 				if(value >= target) {
 					clearInterval(interval);
 					$obj.html(target);
-					if(target == 1999) {
+					if($obj.parent().parent().index() == 0) {
 						$obj.html($obj.html().substr(0, 2) + ',' + $obj.html().substr(2, 2)); 
 					}
 				}
