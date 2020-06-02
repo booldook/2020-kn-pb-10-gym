@@ -255,7 +255,7 @@ function onContact(event) {
 }
 
 function onTopClick() {
-	$("html, body").stop().animate({"scrollTop": 0}, 800);
+	$("html, body").stop().animate({"scrollTop": 0}, 800, onScroll);
 }
 
 /************ 이벤트선언 *************/
