@@ -23,6 +23,20 @@ $(".section").each(function(i){
 }); 
 */
 
+if(5>3 && 6>5) console.log("true && true");	// AND
+if(5>3 || 4>5) console.log("true || false"); // OR
+/*
+true 	&& true 	=> true
+true 	&& false 	=> false
+false && true 	=> false
+false && salse 	=> false
+
+true 	|| true 	=> true
+true 	|| false 	=> true
+false || true 	=> true
+false || false 	=> false
+*/
+
 /************ 전역변수 *************/
 var datas;
 var mainNow = 0;
@@ -134,10 +148,10 @@ function onScroll() {
 		}
 	});
 
-	if(	bottom > $(".info-wrap").offset().top &&	infoChk ) {
+	if(	bottom > $(".info-wrap").offset().top && infoChk ) {
 		infoChk = false;
-		$(".info-wrap").find(".title").each(function(){
-			var $obj = $(this).find("span").eq(0);
+		$(".info-wrap").find(".title").each(function(idx){
+			var $obj = $(this).find(".score");
 			var speed = Number($(this).data("speed"));
 			var gap = Number($(this).data("gap"));
 			var target = Number($(this).data("target"));
@@ -147,9 +161,7 @@ function onScroll() {
 				if(value >= target) {
 					clearInterval(interval);
 					$obj.html(target);
-					if($obj.parent().parent().index() == 0) {
-						$obj.html($obj.html().substr(0, 2) + ',' + $obj.html().substr(2, 2)); 
-					}
+					if(idx == 0) $obj.html($obj.html().substr(0, 2) + ',' + $obj.html().substr(2, 2)); 
 				}
 			}, speed);
 		});
