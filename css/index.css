@@ -4,11 +4,15 @@ font-family: 'Lato', sans-serif;
 font-family: 'Oswald', sans-serif;
 */
 /*********** 공통사항 ************/
-html, body {font-family: 'Lato', sans-serif; height: 5000px;}
+html, body {font-family: 'Lato', sans-serif;}
 .red-dot {color: #f30;}
 .wrapper-small {max-width: 1200px; margin: auto; padding: 7rem 10%; text-align: center;}
 .wrapper-small > .title {font-size: 3rem; font-family: 'Oswald', sans-serif; line-height: 1.1;}
 .wrapper-small > .desc {width: 50%; margin: 2rem auto;}
+
+.bt-top {width: 50px; height: 50px; border: 1px solid rgba(0,0,0,0.3); border-radius: 3px; background-color: rgba(0,0,0,0.5); display: table; font-size: 1.25rem; color: #fff; cursor: pointer; transition: all 1s; position: fixed; bottom: 40px; right: 40px; z-index: 999; visibility: hidden;}
+.bt-top:hover {color: #f30; background-color: rgba(255,255,255, 0.8);}
+.bt-top > .fa {display: table-cell; text-align: center; vertical-align: middle;}
 
 
 /*********** .header ************/
@@ -200,6 +204,8 @@ html, body {font-family: 'Lato', sans-serif; height: 5000px;}
 .copy-wrap .sns-footer .facebook-icon:hover {background-color: #1f59b6; color: #fff;}
 .copy-wrap .sns-footer .insta-icon:hover {background-color: #b6751f; color: #fff;}
 .copy-wrap .sns-footer .mail-icon:hover {background-color: #1b9b41; color: #fff;}
+
+
 
 /*********** 애니메이션 ************/
 .ani {animation-fill-mode: forwards; animation-duration: 0.5s; animation-play-state: paused;}

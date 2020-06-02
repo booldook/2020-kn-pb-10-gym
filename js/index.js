@@ -166,6 +166,9 @@ function onScroll() {
 			}, speed);
 		});
 	}
+
+	if(scTop > 800) $(".bt-top").css("visibility", "visible");
+	else $(".bt-top").css("visibility", "hidden");
 }
 
 function onNaviHover() {
@@ -251,6 +254,10 @@ function onContact(event) {
 	this.reset();
 }
 
+function onTopClick() {
+	$("html, body").stop().animate({"scrollTop": 0}, 800);
+}
+
 /************ 이벤트선언 *************/
 $(window).resize(onResize).trigger("resize");
 $(window).scroll(onScroll).trigger("scroll");
@@ -267,3 +274,5 @@ $("section").imagesLoaded(onResize);
 var $masonry = $(".classes").imagesLoaded(onMasonry);
 
 $('#contactForm').submit(onContact);
+
+$(".bt-top").click(onTopClick);
